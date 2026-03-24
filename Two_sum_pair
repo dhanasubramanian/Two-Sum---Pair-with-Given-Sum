@@ -1,0 +1,17 @@
+import java.util.HashSet;
+
+class Solution {
+    public boolean twoSum(int[] arr, int target) {
+        HashSet<Integer> seenNumbers = new HashSet<>();
+        for (int currentNum : arr) {
+            int needed = target - currentNum;
+            if (seenNumbers.contains(needed)) {
+                return true; // Found a pair!
+            }
+            seenNumbers.add(currentNum);
+        }
+        return false;
+    }
+}
+            }
+
